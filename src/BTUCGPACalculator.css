@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(to bottom right, #e0f2fe, #f0f9ff);
+  padding: 0;
+}
+
+.calculator-container {
+  max-width: 1280px;
+  margin: 2rem auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  color: #1e40af;
+  margin-bottom: 2rem;
+}
+
+.semester-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .semester-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .semester-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.semester-card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
+}
+
+.semester-card:hover {
+  transform: translateY(-4px);
+}
+
+.semester-heading {
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #374151;
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.5rem;
+  outline: none;
+  font-size: 1rem;
+}
+
+.input-field:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.3);
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.calculate-button {
+  background: linear-gradient(to right, #2563eb, #1d4ed8);
+  color: white;
+  padding: 0.75rem 2rem;
+  font-size: 1.25rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.calculate-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+.result-box {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  color: #1f2937;
+}
+
+.result-box span {
+  color: #16a34a;
+  font-weight: bold;
+}
